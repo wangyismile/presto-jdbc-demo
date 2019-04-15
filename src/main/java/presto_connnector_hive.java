@@ -22,6 +22,7 @@ public class presto_connnector_hive {
             //遍历查询结果
             int line = 1;
             while (rs.next()) {
+                //根据需求解析结果
                 System.out.println(line + "  event_time=" + rs.getString(1) + "  mart_name=" + rs.getString(2));
                 line++;
             }
