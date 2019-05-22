@@ -4,18 +4,15 @@ public class presto_connnector_hive {
     public static void main(String[] args) {
         try {
             //设置用户名密码
-            String password = "nnJ80oS14xcc3isrdn10";
-            String userName = "dd_edw";
-            // 本地代理, 线上服务器,请取消此句
-            // HttpUtil.isTest = true;
+            String password = "xxxxxxxxxxxxxx";
+            String userName = "******";
             //定义一个数据源的链接对象，选择合适的驱动
             Connection con = null;
             Class.forName("com.facebook.presto.jdbc.PrestoDriver");
-            // 固定使用host : 172.22.96.76:8888
             //连接串格式：jdbc:jdpresto://presto-server-url/catalog/schema
-            con = DriverManager.getConnection("jdbc:jdpresto://bdpadhoc.jd.com:8888/dd_edw/app", userName, password);
+            con = DriverManager.getConnection("jdbc:jdpresto://bdpadhoc.jd.com:8888/******/app", userName, password);
             //准备sql
-            String sqlString = "select * from fdm.fdm_m99_cluster_hdfs_audit_aggr_info_di limit 3";
+            String sqlString = "show tables";
             PreparedStatement stmt = con.prepareStatement(sqlString);
             //执行sql
             ResultSet rs = stmt.executeQuery();

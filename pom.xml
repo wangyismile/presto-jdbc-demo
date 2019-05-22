@@ -21,12 +21,6 @@
 
   <dependencies>
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
       <groupId>presto-jdbc-jd</groupId>
       <artifactId>presto-jdbc-jd</artifactId>
       <version>0.212.1</version>
